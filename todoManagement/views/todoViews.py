@@ -91,7 +91,7 @@ class todoManager(APIView):
                 settings.BACKEND_LOGGER.info(f"{'=' * 30} {request.META.get('REQUEST_ID')} - Update Todo Task > End {'=' * 30}")
                 return makeJsonResponse("Todo Task Update Successfully!", '', rs.HTTP_200_OK)
             else:
-                settings.BACKEND_LOGGER.error(f"Request_id: {request.META.get('REQUEST_ID')} {'=' * 5}; message: Todo Task does not exist.; Exception : {str(e)}; request body : {json.dumps(request.data)}")
+                settings.BACKEND_LOGGER.error(f"Request_id: {request.META.get('REQUEST_ID')} {'=' * 5}; message: Todo Task does not exist.; request body : {json.dumps(request.data)}")
                 settings.BACKEND_LOGGER.info(f"{'=' * 30} {request.META.get('REQUEST_ID')} - Update Todo Task > End {'=' * 30}")
                 return makeJsonResponse('', "Todo Task does not exist.", rs.HTTP_500_INTERNAL_SERVER_ERROR)
 

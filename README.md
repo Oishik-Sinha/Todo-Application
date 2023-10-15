@@ -34,7 +34,7 @@ Follow these steps to set up and run the Django project:
 ### 3. Configure the .env file.
 - Navigate to the project directory. In the Project directory navigate to the folder `todoApplication` where you can find a file with the name `.env.rename`
 - Rename the provided `.env.rename` file to `.env`.
-- Open the `.env` file in a text editor and provide the necessary database credentials and informations. <br/>
+- Open the `.env` file in a text editor and provide the necessary database credentials and informations and email credentials to send notifications. <br/>
   For example:
   ```env
   SECRET_KEY=your_secret_key
@@ -44,6 +44,12 @@ Follow these steps to set up and run the Django project:
   DATABASE_PASSWORD=your_database_password
   DATABASE_HOST=your_database_host
   DATABASE_PORT=your_database_port
+
+  # email to send notification
+  EMAIL_ID=your_email_id
+
+  # email password (for gmail use app password)
+  EMAIL_PASSWORD=your_email_password
   ```
   ###### *Note: you can use different database engine, here mysql database is being used.*
 
@@ -73,7 +79,14 @@ You can now access the Django project.<br/>
 
 ### Please follow the Api Documentation to Access the APIs
 - Api_Documentation.md ( https://github.com/Oishik-Sinha/Todo-Application/blob/main/Api_Documentation.md )
+<br/>
 
+### Please Find The bellow Sample Image for Notification
+![Sample Mail Notification](https://github.com/Oishik-Sinha/Todo-Application/blob/main/sample_mail_notification_example.jpg)
+
+###### *Note: Currently it sends the notification at midnight.*
+
+<br/>
 ---
 
 ## Additional Notes

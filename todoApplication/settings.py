@@ -272,9 +272,14 @@ SCHEDULER_JOBSTORES = {
         'type': 'default',
     },
 }
+
+# schedule job
 from operations import scheduledJob
 
-SCHEDULER = BackgroundScheduler()
-SCHEDULER.add_job(scheduledJob.sendMail, 'cron', hour=1, minute=0)  # Run Midnight 1
+SENDER_EMAIL = env('EMAIL_ID')
+SENDER_PASSWORD = env('EMAIL_PASSWORD')
+
+s = BackgroundScheduler()
+s.add_job(scheduledJob.sendMail, 'cron', hour=0, minute=0)  # Run Midnight 12 a.m
 # SCHEDULER.add_job(scheduledJob.sendMail, 'interval', minutes=1)  # Run every minute
-SCHEDULER.start()
+s.start()
