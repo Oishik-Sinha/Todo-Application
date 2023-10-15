@@ -52,13 +52,14 @@ Follow these steps to set up and run the Django project:
   EMAIL_PASSWORD=your_email_password
   ```
   ###### *Note: you can use different database engine, here mysql database is being used.*
-
+  
 ### 4. Apply database migrations and initialize data.
 - Open your terminal and navigate to the project directory and run the following commands one by one<br/>
   i. `python manage.py makemigrations` <br/>
   ii. `python manage.py migrate` <br/>
 
-<br/><br/>
+<br/>
+
 ---
 <br/>
 
@@ -87,6 +88,7 @@ You can now access the Django project.<br/>
 ###### *Note: Currently it sends the notification at midnight.*
 
 <br/>
+
 ---
 
 ## Additional Notes
