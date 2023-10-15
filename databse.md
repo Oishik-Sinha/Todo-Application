@@ -50,7 +50,7 @@ Implement queries or methods to retrieve nodes based on different criteria.
   Django ORM models code look like this: <br/>
   ```python
   todoTaskList.objects.filter(user=<user_id>)
-  # Example: Animals.objects.filter(parent=2)
+  # Example: todoTaskList.objects.filter(user=2)
   ```
 
   MySQL query might look like this: <br/>
